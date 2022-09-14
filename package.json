@@ -1,0 +1,14 @@
+{
+  "name": "achievement-tool-maker",
+  "version": "0.0.1",
+  "module": "src/index.ts",
+
+  "scripts": {
+    "start": "bun run src/index.ts",
+    "test": "cd test && bun wiptest"
+  },
+
+  "devDependencies": {
+    "bun-types": "latest"
+  }
+}
