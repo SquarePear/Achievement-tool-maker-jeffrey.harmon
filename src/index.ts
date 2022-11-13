@@ -1,6 +1,6 @@
 import { GradeCalculator } from "./grade"
+import getInput from "./gradeInput"
 
-// Get categories from command line
 const categories = [
     'Engagement',
     'Assignments',
@@ -10,22 +10,8 @@ const categories = [
     'Final Exam'
 ]
 
-const grade = new GradeCalculator(categories)
+const gradeCalculator = new GradeCalculator(categories)
 
-// Get grades from command line
-for (let category of categories) {
-    let gradeInput = null
+getInput(gradeCalculator)
 
-    while (gradeInput === null) {
-        gradeInput = prompt(`Enter grade for ${category}: `).toLocaleUpperCase()
-
-        try {
-            grade.addGrade(category, gradeInput)
-        } catch (error) {
-            console.log(error)
-            gradeInput = null
-        }
-    }
-}
-
-console.log(`Final grade: ${grade.getFinalGrade()}`)
+console.log(`Final grade: ${gradeCalculator.getFinalGrade()}`)
