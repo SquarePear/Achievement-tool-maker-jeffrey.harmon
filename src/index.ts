@@ -1,16 +1,7 @@
-import { GradeCalculator } from "./grade"
+import { cs222GradeCalculator } from "./cs222GradeCalculator"
 import getInput from "./gradeInput"
 
-const categories = [
-    'Engagement',
-    'Assignments',
-    'Achievements',
-    'Self Assesment',
-    'Projects',
-    'Final Exam'
-]
-
-const gradeCalculator = new GradeCalculator(categories)
+const gradeCalculator = new cs222GradeCalculator()
 
 getInput(gradeCalculator)
 

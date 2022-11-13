@@ -37,10 +37,11 @@ export class GradeCalculator {
     }
 
     getFinalGrade(): Grade {
-        const Grades: Grade[] = Object.values(Grade).reverse().map(key => Grade[key])
+        const Grades: Grade[] = Object.keys(Grade).map(key => Grade[key]).reverse()
 
         for (let grade in Grades) {
             grade = Grades[grade]
+
             if (this.CategoryGrade.includes(Grade[grade]))
                 return Grade[grade]
         }
